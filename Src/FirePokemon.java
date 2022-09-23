@@ -11,4 +11,13 @@ public abstract class FirePokemon extends PokemonSuper {
 
     }
 
+    @Override
+    public void speaks() {
+        System.out.println(getName() + " SCREAMS " + getSound());
+    }
+    @Override
+    public void eats() {
+        System.out.println(getName() + " eats " + getFood());
+    }
+
 }
