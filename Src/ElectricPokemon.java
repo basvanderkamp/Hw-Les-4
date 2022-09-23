@@ -3,13 +3,13 @@ import org.w3c.dom.DOMStringList;
 public class ElectricPokemon extends PokemonSuper {
 
     private String lightningColor;
-    private String habits;
+    private String mood;
 
 
-    public ElectricPokemon(String name, int level, int hp, String food, String sound, String lightningColor, String habits) {
+    public ElectricPokemon(String name, int level, int hp, String food, String sound, String lightningColor, String mood) {
         super(name, level, hp, food, sound);
         this.lightningColor = lightningColor;
-        this.habits = habits;
+        this.mood = mood;
     }
 
     @Override
@@ -21,6 +21,8 @@ public class ElectricPokemon extends PokemonSuper {
     public void eats() {
         System.out.println(getName() + " eats " + getFood());
     }
+
+
 
 
     public void thunderpunch() {
@@ -37,5 +39,9 @@ public class ElectricPokemon extends PokemonSuper {
 
     public void voltTackle() {
         System.out.println(getName() + " uses voltTackle");
+    }
+
+    public String toString() {
+        return("the name of this pokemon is " + getName() + " his level is " + getLevel() + " and he has " + getHp() + " Healdpoints " + " give him some " + getFood() + ". "+ getName() + " says: " + getSound() + ". " + "around him are the electrics " + lightningColor + ". his mood is " + mood);
     }
 }
